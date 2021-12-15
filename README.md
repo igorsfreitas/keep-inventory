@@ -33,8 +33,13 @@ $ npm install
 ```
 ## Run Docker with PGSQL
 
+```bash
+# URL Adminer para criar DB: http://localhost:8080/
+# Login Adminer: pguser
+# Senha Adminer: pgpassword
+# Criar DB: keep-inventory
 $ docker-compose up -d
-
+```
 ## Running the app
 
 ```bash
