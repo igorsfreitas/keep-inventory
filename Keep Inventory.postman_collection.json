@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "9277d9da-db45-4369-84cd-cd4cb334d747",
+		"name": "Keep Inventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ADD Inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"adminId\":1,\n    \"name\":\"Inventário Teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/inventory/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"inventory",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
