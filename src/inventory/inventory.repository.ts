@@ -19,6 +19,7 @@ export class InventoryRepository extends Repository<Inventory> {
           await inventory.save();
           return inventory;
         } catch (error) {
+          // Código de erro 23505, que segundo a documentação do PostgreSQL é o código de erro retornado
           if (error.code.toString() === '23505') {
             throw new ConflictException('Inventário já cadastrado para essa unidade');
           } else {
