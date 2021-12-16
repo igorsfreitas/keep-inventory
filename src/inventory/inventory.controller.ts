@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, ValidationPipe } from '@nestjs/common';
 import { CreateInventoryDto } from './dto/create-inventory.dto';
 import { ReturnInventoryDto } from './dto/return-inventory.dto';
 import { InventoryService } from './inventory.service';
@@ -9,7 +9,7 @@ export class InventoryController {
 
   @Post()
   async createInventory(
-    @Body() createInventoryDto: CreateInventoryDto,
+    @Body(ValidationPipe) createInventoryDto: CreateInventoryDto,
   ): Promise<ReturnInventoryDto> {
     const inventory = await this.inventoryService.createInventory(createInventoryDto);
     return {
