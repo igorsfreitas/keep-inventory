@@ -1,8 +1,6 @@
 import {
-  IsEmail,
   IsNotEmpty,
-  MaxLength,
-  MinLength,
+  MaxLength
 } from 'class-validator';
 
 export class CreateInventoryDto {
